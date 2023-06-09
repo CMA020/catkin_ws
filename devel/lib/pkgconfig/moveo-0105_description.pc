@@ -1,0 +1,8 @@
+prefix=/home/cma/catkin_ws/devel
+
+Name: moveo-0105_description
+Description: Description of moveo-0105_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

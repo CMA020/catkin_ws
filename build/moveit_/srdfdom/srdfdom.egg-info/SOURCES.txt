@@ -1,0 +1,5 @@
+README.md
+setup.py
+src/srdfdom/__init__.py
+src/srdfdom/srdf.py
+test/test.py

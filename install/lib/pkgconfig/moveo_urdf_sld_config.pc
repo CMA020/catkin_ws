@@ -1,0 +1,8 @@
+prefix=/home/cma/catkin_ws/install
+
+Name: moveo_urdf_sld_config
+Description: Description of moveo_urdf_sld_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

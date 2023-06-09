@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cma/catkin_ws/devel/include/moveit/version.h
+
+/home/cma/catkin_ws/src/moveit_/moveit/moveit_core/version/version.cpp
+moveit/version.h
+-
+iostream
+-
+cstring
+-
+
