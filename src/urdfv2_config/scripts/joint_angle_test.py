@@ -50,8 +50,16 @@ class Ur5Moveit:
         rospy.loginfo(list_joint_values)
 
         self._group.set_joint_value_target(arg_list_joint_angles)
-        self._group.plan()
+        #self._group.plan()
         #self._group.execute(self._exectute_trajectory_client)
+        plan = self._group.plan()
+        goal = moveit_msgs.msg.ExecuteTrajectoryGoal()
+        try:
+            goal.trajectory = plan[1]
+        except:
+            goal.trajectory = plan
+        self._exectute_trajectory_client.send_goal(goal)
+        self._exectute_trajectory_client.wait_for_result()
         flag_plan = self._group.go(wait=True)
 
         list_joint_values = self._group.get_current_joint_values()
@@ -69,7 +77,7 @@ class Ur5Moveit:
             rospy.logerr(
                 '\033[94m' + ">>> set_joint_angles() Failed." + '\033[0m')
 
-        return flag_plan
+        #return flag_plan
 
     # Destructor
 
