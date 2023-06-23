@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: urdf_v16
+    relative_path: urdf/urdf_v16.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/urdf_v16.srdf
+  CONFIG:
+    author_name: CMA
+    author_email: f20201870@pilani.bits-pilani.ac.in
+    generated_timestamp: 1687503060

@@ -17,7 +17,7 @@ class Ur5Moveit:
 
         rospy.init_node('node_eg3_set_joint_angles', anonymous=True)
 
-        self._planning_group = "arm"
+        self._planning_group = "arm1"
         self._commander = moveit_commander.roscpp_initialize(sys.argv)
         self._robot = moveit_commander.RobotCommander()
         self._scene = moveit_commander.PlanningSceneInterface()
@@ -92,7 +92,7 @@ class Ur5MoveitE:
 
         rospy.init_node('node_eg3_set_joint_angles', anonymous=True)
 
-        self._planning_group = "end_effector"
+        self._planning_group = "end_effector1"
         self._commander = moveit_commander.roscpp_initialize(sys.argv)
         self._robot = moveit_commander.RobotCommander()
         self._scene = moveit_commander.PlanningSceneInterface()
@@ -188,8 +188,8 @@ def main():
                           math.radians(-20),
                           ]
     lst_joint_angles_1E = [math.radians(0)]
-    lst_joint_angles_2E = [math.radians(20)]
-    lst_joint_angles_3E = [math.radians(-30)]
+    lst_joint_angles_2E = [math.radians(50)]
+    lst_joint_angles_3E = [math.radians(10)]
 
     while not rospy.is_shutdown():
         ur5.set_joint_angles(lst_joint_angles_1)
