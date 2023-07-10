@@ -187,9 +187,9 @@ def main():
                           math.radians(-17),
                           math.radians(-20),
                           ]
-    lst_joint_angles_1E = [math.radians(0)]
-    lst_joint_angles_2E = [math.radians(50)]
-    lst_joint_angles_3E = [math.radians(10)]
+    lst_joint_angles_1E = [math.radians(0),math.radians(0)]
+    lst_joint_angles_2E = [math.radians(0),math.radians(0)]
+    lst_joint_angles_3E = [math.radians(0),math.radians(0)]
 
     while not rospy.is_shutdown():
         ur5.set_joint_angles(lst_joint_angles_1)

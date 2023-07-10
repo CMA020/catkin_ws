@@ -300,7 +300,7 @@
     name="joint_5"
     type="continuous">
     <origin
-      xyz="0 0 0.098960745637557"
+      xyz="0 0 0.098961"
       rpy="0 0 0" />
     <parent
       link="wrist_1" />
@@ -313,17 +313,17 @@
     name="gripper_base">
     <inertial>
       <origin
-        xyz="0.0143867739743831 -0.00449126467193595 0.734040602507835"
+        xyz="0.0144248332652381 -0.00140943468206361 0.729409570686998"
         rpy="0 0 0" />
       <mass
-        value="0.066955061265398" />
+        value="0.0669550622960312" />
       <inertia
-        ixx="2.24885103661165E-05"
-        ixy="2.3577953167972E-06"
-        ixz="-2.87441655034492E-06"
-        iyy="3.18452563754739E-05"
-        iyz="3.57683862371262E-07"
-        izz="3.67649414250893E-05" />
+        ixx="2.24885107005276E-05"
+        ixy="2.35779600509359E-06"
+        ixz="-2.87441674029786E-06"
+        iyy="3.18452559004708E-05"
+        iyz="3.57683917662539E-07"
+        izz="3.67649419263123E-05" />
     </inertial>
     <visual>
       <origin
@@ -331,7 +331,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_v4/meshes/gripper_base.STL" />
+          filename="package://urdf_v16/meshes/gripper_base.STL" />
       </geometry>
       <material
         name="">
@@ -345,7 +345,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_v4/meshes/gripper_base.STL" />
+          filename="package://urdf_v16/meshes/gripper_base.STL" />
       </geometry>
     </collision>
   </link>
@@ -353,7 +353,7 @@
     name="joint_6"
     type="fixed">
     <origin
-      xyz="0.00101787720548718 0.0025808298232558 -0.67198995308091"
+      xyz="0.00098171 -0.000501 -0.66696"
       rpy="0 0 0" />
     <parent
       link="wrist_2" />
@@ -363,20 +363,20 @@
       xyz="0 0 0" />
   </joint>
   <link
-    name="gripper_link_gear1">
+    name="servo_gear1">
     <inertial>
       <origin
-        xyz="-0.00297505109048085 -0.000951083288177557 0.00793986780389178"
+        xyz="-0.0100576763756515 -0.00793429336823925 -0.000922276940248268"
         rpy="0 0 0" />
       <mass
-        value="0.00438273211721454" />
+        value="0.00438273139903777" />
       <inertia
-        ixx="9.8926795623632E-07"
-        ixy="-2.40992911441646E-09"
-        ixz="-4.25779236150232E-09"
-        iyy="8.26888050184976E-07"
-        iyz="-3.67405635821252E-08"
-        izz="1.8832577113998E-07" />
+        ixx="9.89317510651496E-07"
+        ixy="1.98722680590235E-10"
+        ixz="-7.64270919579872E-10"
+        iyy="1.8900131850761E-07"
+        iyz="4.23805101340853E-08"
+        izz="8.26162926123892E-07" />
     </inertial>
     <visual>
       <origin
@@ -384,7 +384,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_v4/meshes/gripper_link_gear1.STL" />
+          filename="package://urdf_v16/meshes/servo_gear1.STL" />
       </geometry>
       <material
         name="">
@@ -398,7 +398,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_v4/meshes/gripper_link_gear1.STL" />
+          filename="package://urdf_v16/meshes/servo_gear1.STL" />
       </geometry>
     </collision>
   </link>
@@ -406,30 +406,30 @@
     name="joint_7"
     type="continuous">
     <origin
-      xyz="0.0022853 -0.016581 0.73698"
-      rpy="0 0 0.013775" />
+      xyz="0.0093777 -0.013452 0.73231"
+      rpy="-1.5563 0.0046149 0.0046825" />
     <parent
       link="gripper_base" />
     <child
-      link="gripper_link_gear1" />
+      link="servo_gear1" />
     <axis
-      xyz="0.99989 -0.013774 -0.0046829" />
+      xyz="0.99999 0 -0.0046829" />
   </joint>
   <link
-    name="gripper_link_gear2">
+    name="leg1">
     <inertial>
       <origin
-        xyz="0.00299445879950389 -0.00793429124073131 -0.000936572365103583"
+        xyz="0.00929593624657088 -0.00070323766853897 0.04759195429348"
         rpy="0 0 0" />
       <mass
-        value="0.00438273213374149" />
+        value="0.0106754375169454" />
       <inertia
-        ixx="9.8931757088241E-07"
-        ixy="1.98696300966468E-10"
-        ixz="-7.64266700173944E-10"
-        iyy="1.89001473541034E-07"
-        iyz="4.23806404132476E-08"
-        izz="8.2616283408162E-07" />
+        ixx="4.10221567193055E-06"
+        ixy="-1.70840076438384E-09"
+        ixz="-9.73747882338398E-09"
+        iyy="4.17675163334443E-06"
+        iyz="-6.39775284497913E-07"
+        izz="5.77185004785099E-07" />
     </inertial>
     <visual>
       <origin
@@ -437,7 +437,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_v4/meshes/gripper_link_gear2.STL" />
+          filename="package://urdf_v16/meshes/leg1.STL" />
       </geometry>
       <material
         name="">
@@ -451,77 +451,74 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_v4/meshes/gripper_link_gear2.STL" />
+          filename="package://urdf_v16/meshes/leg1.STL" />
       </geometry>
     </collision>
+  </link>
+  <joint
+    name="jleg1"
+    type="fixed">
+    <origin
+      xyz="-0.019057 -0.019896 0.0073322"
+      rpy="1.5563 0.0046149 -0.0046825" />
+    <parent
+      link="servo_gear1" />
+    <child
+      link="leg1" />
+    <axis
+      xyz="0.99999 0 -0.0046829" />
+  </joint>
+  <link
+    name="servo_gear2">
+    <inertial>
+      <origin
+        xyz="4.90327258335643E-05 -0.0079342933183536 -0.000922776653681345"
+        rpy="0 0 0" />
+      <mass
+        value="0.00438273139817732" />
+      <inertia
+        ixx="9.89317507891527E-07"
+        ixy="1.98725319420247E-10"
+        ixz="-7.64271453185175E-10"
+        iyy="1.8900131821962E-07"
+        iyz="4.23805083000154E-08"
+        izz="8.26162923689625E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_v16/meshes/servo_gear2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_v16/meshes/servo_gear2.STL" />
+      </geometry>
+    </collision>
+    <ignore_collision link="servo_gear1"/>
   </link>
   <joint
     name="joint_8"
     type="continuous">
     <origin
-      xyz="0.0022853 0.011419 0.73698"
-      rpy="-1.5621 -0.0047239 -3.1369" />
+      xyz="-0.00062209 0.014501 0.73236"
+      rpy="-1.5563 -0.0047509 -3.1369" />
     <parent
       link="gripper_base" />
     <child
-      link="gripper_link_gear2" />
-    <axis
-      xyz="-0.99989 0.013774 0.0046829" />
-    <mimic
-      joint="joint_7"
-      multiplier="-1"
-      offset="0" />
-  </joint>
-  <link
-    name="gripper_arm1">
-    <inertial>
-      <origin
-        xyz="-0.00301386925573499 -0.0200000985229348 1.41255089266545E-05"
-        rpy="0 0 0" />
-      <mass
-        value="0.00163735500294605" />
-      <inertia
-        ixx="3.04623057395788E-07"
-        ixy="3.19627610575236E-14"
-        ixz="-4.21698270702764E-12"
-        iyy="1.02986323316788E-08"
-        iyz="4.4705373109311E-13"
-        izz="3.03722580975896E-07" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://urdf_v4/meshes/gripper_arm1.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://urdf_v4/meshes/gripper_arm1.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="joint_9"
-    type="continuous">
-    <origin
-      xyz="0.002394 -0.0095808 0.75697"
-      rpy="-1.562 0.0046418 0.0046828" />
-    <parent
-      link="gripper_base" />
-    <child
-      link="gripper_arm1" />
+      link="servo_gear2" />
     <axis
       xyz="0.99999 0 -0.0046829" />
     <mimic
@@ -530,20 +527,20 @@
       offset="0" />
   </joint>
   <link
-    name="gripper_arm2">
+    name="leg2">
     <inertial>
       <origin
-        xyz="-0.00305617452391549 0.0200000116021075 1.43016598144752E-05"
+        xyz="-0.00877865438593095 -0.0147032394404991 0.0476765976677737"
         rpy="0 0 0" />
       <mass
-        value="0.00163735500294601" />
+        value="0.0106754461770056" />
       <inertia
-        ixx="3.04623057395786E-07"
-        ixy="-2.78207746145486E-14"
-        ixz="-4.21698270756929E-12"
-        iyy="1.02986323316483E-08"
-        iyz="4.37431804742496E-13"
-        izz="3.03722580975924E-07" />
+        ixx="4.10221667015715E-06"
+        ixy="-1.70826774106503E-09"
+        ixz="-9.73784470972599E-09"
+        iyy="4.17675215863974E-06"
+        iyz="-6.39775026488929E-07"
+        izz="5.77185107952736E-07" />
     </inertial>
     <visual>
       <origin
@@ -551,7 +548,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_v4/meshes/gripper_arm2.STL" />
+          filename="package://urdf_v16/meshes/leg2.STL" />
       </geometry>
       <material
         name="">
@@ -565,25 +562,21 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://urdf_v4/meshes/gripper_arm2.STL" />
+          filename="package://urdf_v16/meshes/leg2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="joint_10"
-    type="continuous">
+    name="jleg2"
+    type="fixed">
     <origin
-      xyz="0.0024363 0.0044192 0.75697"
-      rpy="1.562 0.0046419 -0.0046828" />
+      xyz="0.0091903 -0.019693 0.021245"
+      rpy="1.5563 0.0046149 -0.0046825" />
     <parent
-      link="gripper_base" />
+      link="servo_gear2" />
     <child
-      link="gripper_arm2" />
+      link="leg2" />
     <axis
-      xyz="0.99999 0 -0.0046829" />
-    <mimic
-      joint="joint_9"
-      multiplier="-1"
-      offset="0" />
+      xyz="0 0 0" />
   </joint>
 </robot>

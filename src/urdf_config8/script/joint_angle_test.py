@@ -96,20 +96,26 @@ def main():
                           math.radians(0),
                           math.radians(0),
                           math.radians(0),
+                          math.radians(0),
+                          math.radians(0)
                            ]
 
-    lst_joint_angles_2 = [0.8068,
-                          1.1502,
-                          0.9098,
-                          0,
-                          0.2575,
+    lst_joint_angles_2 = [math.radians(0),
+                          math.radians(-32),
+                          math.radians(13),
+                          math.radians(-56),
+                          math.radians(70),
+                          math.radians(45),
+                          math.radians(5)
                           ]
 
-    lst_joint_angles_3 = [1.0128,
-                          -1.2592,
-                          -0.9442,
-                          0,
-                          -0.3605,
+    lst_joint_angles_3 = [math.radians(0),
+                          math.radians(40),
+                          math.radians(-35),
+                          math.radians(-17),
+                          math.radians(-20),
+                          math.radians(60),
+                          math.radians(15)
                           ]
 
     while not rospy.is_shutdown():

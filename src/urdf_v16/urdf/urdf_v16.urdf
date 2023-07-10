@@ -83,6 +83,7 @@
           filename="package://urdf_v16/meshes/base_link .STL" />
       </geometry>
     </collision>
+    <ignore_collision link="base"/>
   </link>
   <joint
     name="joint_1"
@@ -507,6 +508,7 @@
           filename="package://urdf_v16/meshes/servo_gear2.STL" />
       </geometry>
     </collision>
+    <ignore_collision link="servo_gear1"/>
   </link>
   <joint
     name="joint_8"

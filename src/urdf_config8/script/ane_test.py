@@ -105,18 +105,18 @@ class Ur5MoveitE:
         self._exectute_trajectory_client.wait_for_server()
 
         self._planning_frame = self._group.get_planning_frame()
-        self._eef_link = self._group.get_end_effector_link()
-        self._group_names = self._robot.get_group_names()
+        #self._eef_link = "gripper_base"
+        #self._group_names = self._robot.get_group_names()
 
 
-        rospy.loginfo(
-            '\033[94m' + "Planning Group: {}".format(self._planning_frame) + '\033[0m')
-        rospy.loginfo(
-            '\033[94m' + "End Effector Link: {}".format(self._eef_link) + '\033[0m')
-        rospy.loginfo(
-            '\033[94m' + "Group Names: {}".format(self._group_names) + '\033[0m')
+        #rospy.loginfo(
+            #'\033[94m' + "Planning Group: {}".format(self._planning_frame) + '\033[0m')
+        #rospy.loginfo(
+            #'\033[94m' + "End Effector Link: {}".format(self._eef_link) + '\033[0m')
+        #rospy.loginfo(
+            #'\033[94m' + "Group Names: {}".format(self._group_names) + '\033[0m')
 
-        rospy.loginfo('\033[94m' + " >>> Ur5Moveit init done." + '\033[0m')
+        #rospy.loginfo('\033[94m' + " >>> Ur5Moveit init done." + '\033[0m')
 
     def set_joint_angles(self, arg_list_joint_angles):
 
@@ -141,9 +141,9 @@ class Ur5MoveitE:
         rospy.loginfo('\033[94m' + ">>> Final Joint Values:" + '\033[0m')
         rospy.loginfo(list_joint_values)
 
-        pose_values = self._group.get_current_pose().pose
-        rospy.loginfo('\033[94m' + ">>> Final Pose:" + '\033[0m')
-        rospy.loginfo(pose_values)
+        #pose_values = self._group.get_current_pose().pose
+        #rospy.loginfo('\033[94m' + ">>> Final Pose:" + '\033[0m')
+        #rospy.loginfo(pose_values)
 
         if (flag_plan == True):
             rospy.loginfo(
@@ -187,9 +187,9 @@ def main():
                           math.radians(-17),
                           math.radians(-20),
                           ]
-    lst_joint_angles_1E = [math.radians(0)]
-    lst_joint_angles_2E = [math.radians(50)]
-    lst_joint_angles_3E = [math.radians(10)]
+    lst_joint_angles_1E = [math.radians(0),math.radians(0)]
+    lst_joint_angles_2E = [math.radians(20),math.radians(0)]
+    lst_joint_angles_3E = [math.radians(40),math.radians(0)]
 
     while not rospy.is_shutdown():
         ur5.set_joint_angles(lst_joint_angles_1)
